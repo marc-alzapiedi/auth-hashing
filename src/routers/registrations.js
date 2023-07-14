@@ -4,6 +4,7 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 // const jwt = require('jsonwebtoken');
 const prisma = require('../utils/prisma.js')
+const saltRounds = 10
 
 router.post('/', async (req, res) => {
   const { username, password } = req.body;
